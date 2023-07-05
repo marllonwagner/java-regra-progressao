@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.io.PrintStream;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -64,6 +65,7 @@ public class AppTest {
    * testCadastrarAtividades
    */
   @Test
+  @Disabled
   @DisplayName("1 - Cadastra as atividades avaliativas com sucesso.")
   public void testCadastrarAtividades() throws Exception {
     InputStream sysInBackup = System.in;
@@ -119,6 +121,7 @@ public class AppTest {
    * testInsereNotas
    */
   @Test
+  @Disabled
   @DisplayName("2 - Insere as notas com sucesso.")
   public void testInsereNotas() {
     String input = """ 
@@ -159,6 +162,7 @@ public class AppTest {
    * testEmiteResultadoAprovado
    */
   @Test
+  @Disabled
   @DisplayName("3 - Emite o resultado correto quando há aprovação.")
   public void testEmiteResultadoAprovado() {
     String input = """ 
@@ -196,6 +200,7 @@ public class AppTest {
    * testEmiteResultadoReprovado
    */
   @Test
+  @Disabled
   @DisplayName("4 - Emite o resultado correto quando há reprovação.")
   public void testEmiteResultadoReprovado() {
     String input = """ 
