@@ -12,10 +12,11 @@ public class InfoGetter {
    *
    * @return O número de atividades.
    */
-  public static short activitiesNumber() {
+  public static short activitiesNumber(Scanner scan) {
     System.out.println("Digite a quantidade de atividades para cadastrar:");
-    Scanner scanNumb = new Scanner(System.in);
-    return scanNumb.nextShort();
+    short actNum = scan.nextShort();
+    scan.nextLine();
+    return actNum;
   }
 
   /**
@@ -24,9 +25,7 @@ public class InfoGetter {
    * @param actNumb O número de atividades.
    * @return Um array contendo as informações das atividades.
    */
-  public static short[] activitiesInfo(short actNumb) {
-    Scanner scan = new Scanner(System.in);
-
+  public static short[] activitiesInfo(short actNumb, Scanner scan) {
 
     short[] data = new short[actNumb * 2];
 
@@ -38,9 +37,8 @@ public class InfoGetter {
       System.out.println("Digite a nota obtida para " + actName + ":");
       data[contador * 2 + 1] = Short.parseShort(scan.nextLine());
     }
-    scan.close();
+
     return data;
   }
-
 
 }

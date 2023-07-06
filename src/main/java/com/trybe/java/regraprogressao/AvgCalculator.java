@@ -25,9 +25,9 @@ public class AvgCalculator {
     double average = (double) weightedSum / totalWeight;
 
     if (average >= 85) {
-      System.out.println("Parabéns! Você alcançou " + average + "%"
+      System.out.println("Parabéns! Você alcançou " + average + "%!"
           +
-          " temos o prazer de informar que você obteve aprovação!");
+          "E temos o prazer de informar que você obteve aprovação!");
     } else {
       System.out.println("Lamentamos informar que, com base na sua pontuação alcançada neste"
           + " período, " + average + "%," + " você não atingiu a pontuação mínima "
