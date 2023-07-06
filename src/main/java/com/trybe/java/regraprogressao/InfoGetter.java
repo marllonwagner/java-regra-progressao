@@ -25,22 +25,22 @@ public class InfoGetter {
    * @return Um array contendo as informações das atividades.
    */
   public static short[] activitiesInfo(short actNumb) {
-    Scanner scanName = new Scanner(System.in);
-    Scanner scanWei = new Scanner(System.in);
-    Scanner scanAv = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
+
 
     short[] data = new short[actNumb * 2];
 
-    for (short contador = 0; contador < actNumb; contador++) {
+    for (int contador = 0; contador < actNumb; contador++) {
       System.out.println("Digite o nome da atividade " + (contador + 1) + ":");
-      String actName = scanName.nextLine();
-      System.out.println(actName);
+      String actName = scan.nextLine();
       System.out.println("Digite o peso da atividade " + (contador + 1) + ":");
-      data[contador * 2] = scanWei.nextShort();
+      data[contador * 2] = Short.parseShort(scan.nextLine());
       System.out.println("Digite a nota obtida para " + actName + ":");
-      data[contador * 2 + 1] = scanAv.nextShort();
+      data[contador * 2 + 1] = Short.parseShort(scan.nextLine());
     }
-
+    scan.close();
     return data;
   }
+
+
 }
